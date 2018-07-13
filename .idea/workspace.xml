@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b05f4c0e-0659-4ba1-b860-83f35fbc1e71" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -51,8 +50,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="345">
+              <caret line="23" column="156" selection-start-line="23" selection-start-column="156" selection-end-line="23" selection-end-column="156" />
             </state>
           </provider>
         </entry>
@@ -231,12 +230,12 @@
       <workItem from="1531449814039" duration="3055000" />
       <workItem from="1531459680650" duration="3000" />
       <workItem from="1531459746116" duration="4190000" />
-      <workItem from="1531464317849" duration="2905000" />
+      <workItem from="1531464317849" duration="3076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10153000" />
+    <option name="totallyTimeSpent" value="10324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="44" width="1440" height="827" extended-state="0" />
@@ -552,8 +551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="345">
+          <caret line="23" column="156" selection-start-line="23" selection-start-column="156" selection-end-line="23" selection-end-column="156" />
         </state>
       </provider>
     </entry>
