@@ -1,8 +1,8 @@
 <template>
-  <el-dialog title="个人信息" :visible.sync="dialogVisible" width="560px" 
+  <el-dialog title="个人信息" :visible.sync="dialogVisible" width="560px"
     @open="handleDialogOpen()" v-loading="loading">
     <div slot="title" class="dialog-header">个人信息</div>
-    <el-form :model="userModel" :rules="rules" 
+    <el-form :model="userModel" :rules="rules"
       ref="personalInfoForm" label-width="80px" label-position="right" size="small">
       <el-form-item label="用户名" prop="name">
         <el-col :span="16"><el-input ref="username" :maxlength="32" v-model="userModel.name" autofocus></el-input></el-col>
@@ -20,12 +20,12 @@
         <el-col :span="16">
           <el-input type="password" v-model="userModel.checkPassword" :disabled="!changePassword" auto-complete="off"></el-input>
         </el-col>
-      </el-form-item>        
+      </el-form-item>
     </el-form>
     <span slot="footer" class="dialog-footer">
       <el-button size="small" @click="handleDialogClose()">取 消</el-button>
       <el-button type="primary" size="small" @click="submitForm('personalInfoForm')">确 定</el-button>
-    </span>    
+    </span>
   </el-dialog>
 </template>
 
@@ -71,7 +71,7 @@ export default {
         loginName: [
           { required: true, message: '请输入登录名', trigger: 'blur' },
           { min: 3, max: 32, message: '长度在 3 到 32 个字符', trigger: 'blur' }
-        ],          
+        ],
         password: [
           { required: this.changePassword, message: '请输入密码', trigger: 'blur' },
           { validator: validatePassword, trigger: 'blur' }
@@ -109,11 +109,11 @@ export default {
         this.dialogVisible = false
       })
       .catch(error => {
-        this.outputError(error)     
+        this.outputError(error)
       })
-    },  
+    },
     handleDialogClose() {
-      this.dialogVisible = false  
+      this.dialogVisible = false
     },
     handleDialogOpen() {
       this.$nextTick(() => {
@@ -136,8 +136,8 @@ export default {
         showClose: true,
         message: '出错了，请按F12查看浏览器日志。',
         type: 'error'
-      })      
-    }    
+      })
+    }
   },
   mounted: function() {
     this.$nextTick(() => {
@@ -167,7 +167,7 @@ export default {
   width: 100%;
   font-weight: bold;
   padding-bottom: 8px;
-  border-bottom: solid 1px #eee;
+  border-bottom: solid 1px #fefefe;
 }
 </style>
 

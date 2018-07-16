@@ -1,11 +1,11 @@
 <template>
-  <el-dialog :title="dialogProps.title" :visible.sync="dialogProps.visible" width="500px" 
+  <el-dialog :title="dialogProps.title" :visible.sync="dialogProps.visible" width="500px"
     v-loading="loading">
     <div slot="title" class="dialog-header">{{ dialogProps.title }}</div>
     <el-row :gutter="15">
       <el-col :span="24">
         <div class="permission-container">
-          <el-tree ref="permissionTree" :data="permissionTreeNodes" show-checkbox 
+          <el-tree ref="permissionTree" :data="permissionTreeNodes" show-checkbox
             :props="treeProps" :highlight-current=true :default-expand-all=true node-key="key"
             :default-checked-keys="permissionKeys"></el-tree>
         </div>
@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     handleDialogClose() {
-      this.dialogProps.visible = false  
+      this.dialogProps.visible = false
     },
     async componentInit(role) {
       this.loading = true
@@ -55,7 +55,7 @@ export default {
       this.permissionKeys = []
 
       try {
-        let [listRouterResp, listResourceResp, listPermissionResp] = await Promise.all([ 
+        let [listRouterResp, listResourceResp, listPermissionResp] = await Promise.all([
           listAllRouter(false),
           listAvailableResource(),
           listResourcePermission(role.id)
@@ -69,7 +69,7 @@ export default {
               name: router.name,
               children: []
             }
-            this.getPermissionChildNode(listRouterResp.data, treeNode, 
+            this.getPermissionChildNode(listRouterResp.data, treeNode,
               listResourceResp.data, listPermissionResp.data)
             treeNodes.push(treeNode)
           }
@@ -150,13 +150,13 @@ export default {
       this.loading = false
       this.$message({
         showClose: true,
-        message: '出错了，请按F12查看浏览器日志。',
+        message: '出错啦，请开发小哥哥来帮忙啦！',
         type: 'error'
-      })      
+      })
     }
   },
   mounted: function() {
-    this.$nextTick(() => {  
+    this.$nextTick(() => {
       this.$on('openSetPermissionDialog', function(role) {
         this.componentInit(role);
       })

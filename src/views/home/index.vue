@@ -132,15 +132,15 @@ export default {
   overflow: hidden;
   .aside-container {
     height: 100%;
-    background-color: #eee;
+    background-color: #fefefe;
     margin: 0px;
     padding: 0px;
   }
 }
 
 .aside-header {
-  background-color: #bbb;
-  color: #eee;
+  background-color: #bad7df;
+  color: #fefefe;
   font-size: 16pt;
   text-align: center;
   margin: 0px auto;
@@ -164,7 +164,7 @@ export default {
   width: 100%;
   overflow: hidden;
   .main-header {
-    background-color: #bbb;
+    background-color: #bad7df;
     padding-right: 10px;
     .header-function {
       text-align: right;
@@ -174,7 +174,7 @@ export default {
         text-decoration: none;
       }
       .personal-link:hover {
-        background-color:#999;
+        background-color:#bac5df;
       }
       img {
         -moz-border-radius: 50%;
@@ -198,8 +198,8 @@ export default {
     line-height: 36px;
     padding-left: 10px;
     border-radius: 0px;
-    background-color: #eee;
-    border-bottom: solid 1px #eeeeee;
+    background-color: #fefefe;
+    border-bottom: solid 1px #eee;
   }
 }
 

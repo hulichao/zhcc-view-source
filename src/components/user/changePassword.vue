@@ -1,8 +1,8 @@
 <template>
-  <el-dialog title="修改密码" :visible.sync="dialogVisible" width="560px" 
+  <el-dialog title="修改密码" :visible.sync="dialogVisible" width="560px"
     @open="handleDialogOpen()" v-loading="loading">
     <div slot="title" class="dialog-header">修改密码</div>
-    <el-form :model="userModel" :rules="rules" 
+    <el-form :model="userModel" :rules="rules"
       ref="changePasswordForm" label-width="80px" label-position="right" size="small">
       <el-form-item label="用户名">
         <el-col :span="16"><el-input disabled v-model="userModel.name"></el-input></el-col>
@@ -19,12 +19,12 @@
         <el-col :span="16">
           <el-input type="password" v-model="userModel.checkPassword" auto-complete="off"></el-input>
         </el-col>
-      </el-form-item>        
+      </el-form-item>
     </el-form>
     <span slot="footer" class="dialog-footer">
       <el-button size="small" @click="handleDialogClose()">取 消</el-button>
       <el-button type="primary" size="small" @click="submitForm('changePasswordForm')">确 定</el-button>
-    </span>    
+    </span>
   </el-dialog>
 </template>
 
@@ -98,11 +98,11 @@ export default {
           showClose: true,
           message: '出错了，请按F12查看浏览器日志。',
           type: 'error'
-        })         
+        })
       })
-    },  
+    },
     handleDialogClose() {
-      this.dialogVisible = false  
+      this.dialogVisible = false
     },
     handleDialogOpen() {
       this.$nextTick(() => {
@@ -115,7 +115,7 @@ export default {
     this.$nextTick(() => {
       this.$on('openChangePasswordDialog', function(user) {
         this.userModel = user
-        this.dialogVisible = true        
+        this.dialogVisible = true
       })
     });
   }
@@ -130,7 +130,7 @@ export default {
   width: 100%;
   font-weight: bold;
   padding-bottom: 8px;
-  border-bottom: solid 1px #eee;
+  border-bottom: solid 1px #fefefe;
 }
 </style>
 
