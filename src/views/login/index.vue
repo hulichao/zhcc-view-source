@@ -1,22 +1,21 @@
 <template>
   <div class="login-container">
-    <el-form class="login-form" :model="loginForm" :rules="rules" ref="loginForm" autoComplete="on" label-position="left">
-      <div class="login-header">
-        <strong class="login-title">系统登录</strong>
-      </div>
+    <el-form class="login-form" :model="loginForm" ref="loginForm" :rules="rules"  label-position="left"
+             label-width="0px" autoComplete="on">
+      <h3 class="login_title">系统登录</h3>
       <div class="login-body">
-        <img class="profile-img" src="../../assets/images/people.png" alt="">
         <el-form-item prop="username">
-          <el-input name="username" size="medium" v-model="loginForm.username" autoComplete="on" autofocus="autofocus" placeholder="用户名">
-            <div class="login-username" slot="prepend"></div>
-          </el-input>
+          <el-input type="text" v-model="loginForm.username" auto-complete="off" placeholder="账号"></el-input>
+          <div class="login-username" slot="prepend"></div>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input name="password" type="password" size="medium" v-model="loginForm.password" placeholder="口令" @keyup.enter.native="doLogin">
-            <template slot="prepend"><div class="login-password"></div></template>
-          </el-input>
+          <el-input type="password" v-model="loginForm.password" auto-complete="off" placeholder="密码"></el-input>
+          <template slot="prepend"><div class="login-password"></div></template>
         </el-form-item>
-        <el-button type="primary" :loading="showLoading" @click.native.prevent="doLogin">登录</el-button>
+        <!--<el-checkbox class="login_remember" v-model="checked" label-position="left">记住密码</el-checkbox>-->
+        <el-form-item style="width: 100%">
+          <el-button type="primary" @click.native.prevent="doLogin" style="width: 100%">登录</el-button>
+        </el-form-item>
       </div>
     </el-form>
   </div>
@@ -32,8 +31,8 @@ export default {
     return {
       displayLoading: false,
       loginForm: {
-        username: '',
-        password: ''
+        username: 'admin',
+        password: 'admin'
       },
       rules: {
         username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
@@ -119,57 +118,24 @@ export default {
 }
 </script>
 
-<style rel="stylesheet/scss" lang="scss" scoped>
-.login-container {
-  .el-input {
-    width: 100%;
-  }
-  .el-button {
-    width: 100%;
-  }
-  .login-form {
-    position: absolute;
-    left: 0;
-    right: 0;
+<style>
+  .login-container {
+    border-radius: 15px;
+    background-clip: padding-box;
+    margin: 180px auto;
     width: 350px;
-    margin: 120px auto;
-    margin-bottom: 20px;
-    border: 1px solid #e0dedb;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    padding: 35px 35px 15px 35px;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 0 25px #cac6c6;
   }
-  .login-header {
-    padding: 10px 15px;
-    border-bottom: 1px solid #d0cdc7;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background-color: #f6f5f4;
-    .login-title {
-      font-size: 20px;
-    }
-  }
-  .login-body {
-    padding: 20px 20px;
+  .login_title {
+    margin: 0px auto 40px auto;
     text-align: center;
-    .profile-img {
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 10px;
-      display: block;
-    }
-    .login-username {
-      width: 20px;
-      height: 20px;
-      margin: 0px -10px;
-      background-image: url("../../assets/images/user.png");
-    }
-    .login-password {
-      width: 20px;
-      height: 20px;
-      margin: 0px -10px;
-      background-image: url("../../assets/images/lock.png");
-    }
+    color: #505458;
   }
-}
+  .login_remember {
+    margin: 0px 0px 35px 0px;
+    text-align: left;
+  }
 </style>
