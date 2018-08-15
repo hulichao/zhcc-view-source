@@ -16,6 +16,10 @@
 ### 墙裂推荐
 建议使用postman,刚开始可能不习惯，但是花点时间稍微学一下，还是很有帮助的。不仅可以快速测试后端接口，而且可以随意构造http请求，包括认证，另外返回的响应很直观。
 
+### 项目地址
+- 前端地址：https://github.com/hulichao/zhcc-view-source.git
+- 后端地址：https://github.com/hulichao/zhcc-server.git
+
 ### 参考
 1. [用mixin全局共享状态实现的前端权限](https://github.com/OneWayTech/vue-auth-solution)
 2. [基于Vue/Vue-Router/axios实现的前端用户权限控制解决方案](https://refined-x.com/2017/11/28/Vue2.0%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/)
