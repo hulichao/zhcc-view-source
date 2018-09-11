@@ -16,6 +16,12 @@
         <el-form-item style="width: 100%">
           <el-button type="primary" @click.native.prevent="doLogin" style="width: 100%">登录</el-button>
         </el-form-item>
+
+        <el-footer>
+          超级管理员：admin admin<br>
+          小小业务员： guest guest <br>
+          不要乱删东西哟！
+        </el-footer>
       </div>
     </el-form>
   </div>
@@ -25,8 +31,15 @@
 import { getToken } from '@/api/auth'
 import { getAuthorizedRouter } from '@/api/router'
 import { mapGetters } from 'vuex'
+import ElCard from "../../../node_modules/element-ui/packages/card/src/main";
+import ElAside from "../../../node_modules/element-ui/packages/aside/src/main";
+import ElFooter from "../../../node_modules/element-ui/packages/footer/src/main";
 
 export default {
+  components: {
+    ElFooter,
+    ElAside,
+    ElCard},
   data() {
     return {
       displayLoading: false,
